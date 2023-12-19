@@ -1,6 +1,6 @@
 {
   "name": "@nbottarini/logger-api",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "An API compatibility layer for library makers to avoid version conflicts using @nbottarini/logger",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
