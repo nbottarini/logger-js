@@ -1,4 +1,4 @@
-import { Levels } from 'dist/types'
+import { Levels } from './Levels'
 import { Appender } from './Appender'
 
 export interface Configuration {
