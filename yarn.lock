@@ -2087,7 +2087,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nbottarini/logger-api@workspace:packages/logger-api":
+"@nbottarini/logger-api@workspace:^, @nbottarini/logger-api@workspace:packages/logger-api":
   version: 0.0.0-use.local
   resolution: "@nbottarini/logger-api@workspace:packages/logger-api"
   dependencies:
@@ -7290,6 +7290,7 @@ __metadata:
   resolution: "node-app@workspace:examples/node-app"
   dependencies:
     "@nbottarini/logger": "workspace:^"
+    "@nbottarini/logger-api": "workspace:^"
     ts-node: "npm:^10.9.2"
   languageName: unknown
   linkType: soft
