@@ -8,7 +8,8 @@ module.exports = {
   },
   globals: {
     module: false,
-    require: false
+    require: false,
+    console: true
   },
   rules: {
     'semi': ['error', 'never'],

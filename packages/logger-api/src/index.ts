@@ -9,6 +9,9 @@ function getRealLoggerOrNull() {
     }
 }
 
-const logger = getRealLoggerOrNull()
+const loggerManager = getRealLoggerOrNull()?.default
 
-export const getLogger: LoggerFactoryFunc = logger ? logger.getLogger : () => new NullLogger()
+export const getLogger: LoggerFactoryFunc = loggerManager ?
+    loggerManager.getLogger.bind(loggerManager)
+    :
+    () => new NullLogger()

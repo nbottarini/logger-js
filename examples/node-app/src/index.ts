@@ -1,4 +1,8 @@
 import loggerManager, { ConsoleAppender, Levels } from '@nbottarini/logger'
+import { getLogger } from '@nbottarini/logger-api'
+
+const loggerFromApi = getLogger('category')
+loggerFromApi.info('LOG FROM API')
 
 loggerManager.configure({
     appenders: {

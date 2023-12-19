@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "@nbottarini/logger": "workspace:^",
+    "@nbottarini/logger-api": "workspace:^",
     "ts-node": "^10.9.2"
   },
   "engines": {
