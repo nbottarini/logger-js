@@ -1,0 +1,14 @@
+{
+  "name": "node-app",
+  "version": "0.2.5",
+  "scripts": {
+    "start": "ts-node-esm src/index.ts"
+  },
+  "dependencies": {
+    "@nbottarini/logger": "workspace:^",
+    "ts-node": "^10.9.2"
+  },
+  "engines": {
+    "node": ">= 18.0.0"
+  }
+}

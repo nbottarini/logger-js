@@ -3,7 +3,7 @@ import { Formatter } from '../formatters/Formatter'
 import { ColoredFormatter } from '../formatters/ColoredFormatter'
 
 export class ConsoleAppender implements Appender {
-    constructor(private formatter: Formatter = new ColoredFormatter()) {}
+    constructor(private formatter: Formatter = ColoredFormatter.onlyTime()) {}
 
     log(event: LogEvent): void {
         const message = this.formatter.format(event)
