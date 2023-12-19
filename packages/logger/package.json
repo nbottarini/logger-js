@@ -33,9 +33,6 @@
     "@nbottarini/javascript-extensions": "^0.7.3",
     "date-format": "^4.0.14"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
   "engines": {
     "node": ">= 18.0.0"
   }
