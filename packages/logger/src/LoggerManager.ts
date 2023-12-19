@@ -2,6 +2,7 @@ import { Configuration, defaultLevel, Logger } from '@nbottarini/abstract-logger
 import { ConsoleAppender } from './appenders/ConsoleAppender'
 import { DefaultLogger } from './DefaultLogger'
 import { CategoryConfigurationCache } from './CategoryConfigurationCache'
+import chalk from 'chalk'
 
 type Constructor = { new (...args: any[]): any }
 
@@ -36,6 +37,10 @@ export class LoggerManager {
 
     isConfigured(): boolean {
         return this._configuration !== null
+    }
+
+    forceColor(): void {
+        chalk.level = 2
     }
 
     private getDefaultConfig(): Configuration {
