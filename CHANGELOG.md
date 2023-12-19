@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/nbottarini/logger-js/compare/v0.2.3...v0.2.4) (2023-12-19)
+
+
+### Bug Fixes
+
+* ci ([bf2a983](https://github.com/nbottarini/logger-js/commit/bf2a983cd8e4b45ff1616a59c06c6870c6f4d2b9))
+
+
+
+
+
 ## [0.2.3](https://github.com/nbottarini/logger-js/compare/v0.2.2...v0.2.3) (2023-12-19)
 
 **Note:** Version bump only for package base
