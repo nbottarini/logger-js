@@ -1,0 +1,42 @@
+{
+  "name": "@nbottarini/logger",
+  "version": "0.1.0",
+  "description": "A simple logging library for javascript with custom levels, appenders and categories. Based on Log4J",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "browser": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "react-native": "dist/esm/index.js",
+  "author": "Nicolás Bottarini <nicolasbottarini@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/nbottarini/logger-js#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nbottarini/logger-js.git"
+  },
+  "keywords": [
+    "solid",
+    "logger",
+    "architecture"
+  ],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn run -T rollup -c",
+    "test": "yarn run -T jest",
+    "lint": "yarn run -T eslint . && yarn run -T tsc --noEmit",
+    "check-all": "yarn lint && yarn test"
+  },
+  "dependencies": {
+    "@nbottarini/abstract-logger": "workspace:^",
+    "@nbottarini/javascript-extensions": "^0.7.3",
+    "date-format": "^4.0.14"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">= 18.0.0"
+  }
+}

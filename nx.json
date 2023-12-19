@@ -1,0 +1,39 @@
+{
+  "targetDefaults": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "cache": true
+    },
+    "lint": {
+      "dependsOn": [
+        "build",
+        "^build"
+      ],
+      "cache": true
+    },
+    "test": {
+      "dependsOn": [
+        "build",
+        "^build"
+      ],
+      "cache": true
+    },
+    "watch": {
+      "dependsOn": [
+        "^build"
+      ]
+    }
+  },
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
+    "sharedGlobals": [],
+    "production": [
+      "default"
+    ]
+  }
+}

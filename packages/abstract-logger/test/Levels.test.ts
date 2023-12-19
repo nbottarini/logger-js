@@ -1,0 +1,52 @@
+import { canLogLevel, Levels } from '../src'
+
+test('canLogLevel', () => {
+    expect(canLogLevel(Levels.TRACE, Levels.TRACE)).toBeTrue()
+    expect(canLogLevel(Levels.DEBUG, Levels.TRACE)).toBeTrue()
+    expect(canLogLevel(Levels.INFO, Levels.TRACE)).toBeTrue()
+    expect(canLogLevel(Levels.WARN, Levels.TRACE)).toBeTrue()
+    expect(canLogLevel(Levels.ERROR, Levels.TRACE)).toBeTrue()
+    expect(canLogLevel(Levels.FATAL, Levels.TRACE)).toBeTrue()
+
+    expect(canLogLevel(Levels.TRACE, Levels.DEBUG)).toBeFalse()
+    expect(canLogLevel(Levels.DEBUG, Levels.DEBUG)).toBeTrue()
+    expect(canLogLevel(Levels.INFO, Levels.DEBUG)).toBeTrue()
+    expect(canLogLevel(Levels.WARN, Levels.DEBUG)).toBeTrue()
+    expect(canLogLevel(Levels.ERROR, Levels.DEBUG)).toBeTrue()
+    expect(canLogLevel(Levels.FATAL, Levels.DEBUG)).toBeTrue()
+
+    expect(canLogLevel(Levels.TRACE, Levels.INFO)).toBeFalse()
+    expect(canLogLevel(Levels.DEBUG, Levels.INFO)).toBeFalse()
+    expect(canLogLevel(Levels.INFO, Levels.INFO)).toBeTrue()
+    expect(canLogLevel(Levels.WARN, Levels.INFO)).toBeTrue()
+    expect(canLogLevel(Levels.ERROR, Levels.INFO)).toBeTrue()
+    expect(canLogLevel(Levels.FATAL, Levels.INFO)).toBeTrue()
+
+    expect(canLogLevel(Levels.TRACE, Levels.WARN)).toBeFalse()
+    expect(canLogLevel(Levels.DEBUG, Levels.WARN)).toBeFalse()
+    expect(canLogLevel(Levels.INFO, Levels.WARN)).toBeFalse()
+    expect(canLogLevel(Levels.WARN, Levels.WARN)).toBeTrue()
+    expect(canLogLevel(Levels.ERROR, Levels.WARN)).toBeTrue()
+    expect(canLogLevel(Levels.FATAL, Levels.WARN)).toBeTrue()
+
+    expect(canLogLevel(Levels.TRACE, Levels.ERROR)).toBeFalse()
+    expect(canLogLevel(Levels.DEBUG, Levels.ERROR)).toBeFalse()
+    expect(canLogLevel(Levels.INFO, Levels.ERROR)).toBeFalse()
+    expect(canLogLevel(Levels.WARN, Levels.ERROR)).toBeFalse()
+    expect(canLogLevel(Levels.ERROR, Levels.ERROR)).toBeTrue()
+    expect(canLogLevel(Levels.FATAL, Levels.ERROR)).toBeTrue()
+
+    expect(canLogLevel(Levels.TRACE, Levels.FATAL)).toBeFalse()
+    expect(canLogLevel(Levels.DEBUG, Levels.FATAL)).toBeFalse()
+    expect(canLogLevel(Levels.INFO, Levels.FATAL)).toBeFalse()
+    expect(canLogLevel(Levels.WARN, Levels.FATAL)).toBeFalse()
+    expect(canLogLevel(Levels.ERROR, Levels.FATAL)).toBeFalse()
+    expect(canLogLevel(Levels.FATAL, Levels.FATAL)).toBeTrue()
+
+    expect(canLogLevel(Levels.TRACE, null)).toBeFalse()
+    expect(canLogLevel(Levels.DEBUG, null)).toBeFalse()
+    expect(canLogLevel(Levels.INFO, null)).toBeFalse()
+    expect(canLogLevel(Levels.WARN, null)).toBeFalse()
+    expect(canLogLevel(Levels.ERROR, null)).toBeFalse()
+    expect(canLogLevel(Levels.FATAL, null)).toBeFalse()
+})
