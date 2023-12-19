@@ -1,4 +1,4 @@
-import { Levels, LogEvent } from "@nbottarini/abstract-logger"
+import { Levels, LogEvent } from '@nbottarini/abstract-logger'
 import { BasicFormatter } from '../../src/formatters/BasicFormatter'
 
 test('return timestamp level and category with empty message if data is empty', () => {
@@ -12,7 +12,7 @@ test('return timestamp level and category with empty message if data is empty', 
 
     const result = formatter.format(event)
 
-    expect(result).toEqual('[2023-08-10T15:13:20.123] [INFO] category1 - \n')
+    expect(result).toEqual('[2023-08-10T15:13:20.123] [INFO] category1 - ')
 })
 
 test('when multiple data concatenate each item', () => {
@@ -26,7 +26,7 @@ test('when multiple data concatenate each item', () => {
 
     const result = formatter.format(event)
 
-    expect(result).toEqual('[2023-08-10T15:13:20.123] [INFO] category1 - one two {"hello":"world"} [1,2]\n')
+    expect(result).toEqual('[2023-08-10T15:13:20.123] [INFO] category1 - one two {"hello":"world"} [1,2]')
 })
 
-const formatter = new BasicFormatter()
+const formatter = BasicFormatter.fullDate()
