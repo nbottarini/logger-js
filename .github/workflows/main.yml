@@ -36,7 +36,7 @@ jobs:
         run: yarn build
       - name: Publish to npm
         run: |
-          'echo -e "npmAuthToken: ${NODE_AUTH_TOKEN}\n" >> .yarnrc.yml'
+          echo -e "npmAuthToken: ${NODE_AUTH_TOKEN}\n" >> .yarnrc.yml
           lerna exec --no-private -- yarn npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
