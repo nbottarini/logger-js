@@ -1,3 +1,4 @@
 import { Logger } from './Logger'
 
-export type LoggerFactoryFunc = (category: string) => Logger
+type Constructor = { new (...args: any[]): any }
+export type LoggerFactoryFunc = (category?: string|Constructor) => Logger

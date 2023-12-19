@@ -15,7 +15,7 @@ export class ConsoleAppender implements Appender {
                 console.debug(message)
                 break
             case Levels.INFO:
-                console.log(message)
+                console.info(message)
                 break
             case Levels.WARN:
                 console.warn(message)
