@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/nbottarini/logger-js/compare/v0.3.1...v0.4.0) (2023-12-19)
+
+
+### Features
+
+* add forceColor option ([eed7021](https://github.com/nbottarini/logger-js/commit/eed70214a3f4eebad98362ca73be6a46de32c159))
+
+
+
+
+
 ## [0.3.1](https://github.com/nbottarini/logger-js/compare/v0.3.0...v0.3.1) (2023-12-19)
 
 **Note:** Version bump only for package @nbottarini/logger
