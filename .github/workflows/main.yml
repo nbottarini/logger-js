@@ -35,7 +35,7 @@ jobs:
       - name: Build
         run: yarn build
       - name: Publish to npm
-        run:
+        run: |
           'echo -e "npmAuthToken: ${NODE_AUTH_TOKEN}\n" >> .yarnrc.yml'
           lerna exec --no-private -- yarn npm publish
         env:
