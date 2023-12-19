@@ -9,12 +9,16 @@ export class ConsoleAppender implements Appender {
         const message = this.formatter.format(event)
         switch (event.level) {
             case Levels.TRACE:
+                console.trace(message)
+                break
             case Levels.DEBUG:
                 console.debug(message)
                 break
             case Levels.INFO:
-            case Levels.WARN:
                 console.log(message)
+                break
+            case Levels.WARN:
+                console.warn(message)
                 break
             case Levels.ERROR:
             case Levels.FATAL:
