@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/nbottarini/logger-js/compare/v0.4.0...v0.5.0) (2023-12-19)
+
+
+### Features
+
+* improve ConsoleAppender ([060c55a](https://github.com/nbottarini/logger-js/commit/060c55a813e4046c6b2d3aab6e2c810bcd68f90c))
+
+
+
+
+
 # [0.4.0](https://github.com/nbottarini/logger-js/compare/v0.3.1...v0.4.0) (2023-12-19)
 
 
