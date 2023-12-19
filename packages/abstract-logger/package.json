@@ -1,6 +1,6 @@
 {
   "name": "@nbottarini/abstract-logger",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Abstract @nbottarini/logger types",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
