@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/nbottarini/logger-js/compare/v0.6.0...v0.7.0) (2023-12-20)
+
+
+### Features
+
+* default logger doesn't log on tests ([b38861f](https://github.com/nbottarini/logger-js/commit/b38861f9ba2727018cb7ffc2deaf32aea4816d1b))
+
+
+
+
+
 # [0.6.0](https://github.com/nbottarini/logger-js/compare/v0.5.2...v0.6.0) (2023-12-20)
 
 
