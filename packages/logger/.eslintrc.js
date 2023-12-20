@@ -11,6 +11,7 @@ module.exports = {
     module: false,
     require: false,
     console: true,
+    process: true,
   },
   rules: {
     'semi': ['error', 'never'],

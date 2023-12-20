@@ -44,6 +44,9 @@ export class LoggerManager {
     }
 
     private getDefaultConfig(): Configuration {
+        if (process.env.NODE_ENV === 'test') {
+            return { appenders: {}, categories: {} }
+        }
         // TODO: Read from ENV
         return defaultConfig
     }
