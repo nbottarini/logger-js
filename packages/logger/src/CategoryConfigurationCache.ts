@@ -40,7 +40,7 @@ export class CategoryConfigurationCache {
 
     private createConfigIfNotExists(category: string) {
         if (this.categories[category]) return
-        this.categories[category] = { appenders: [], level: defaultLevel }
+        this.categories[category] = this.categories['default'] ?? { appenders: [], level: defaultLevel }
     }
 
     private mergeWithParent(category: string, parentCategory: string) {

@@ -121,6 +121,27 @@ describe('getLogger', () => {
             appenders: { appender1, appender2, appender3 },
             categories: {
                 'category1': { appenders: ['appender1', 'appender3'], level: Levels.INFO },
+                'category1.category1_1': { appenders: ['appender2'], level: Levels.INFO },
+                'category1.category1_1.category1_2': { level: Levels.INFO },
+            }
+        })
+        const logger = loggerManager.getLogger('category1.category1_1.category1_2')
+
+        logger.info('Some message')
+
+        expect(appender1.called).toBeTrue()
+        expect(appender2.called).toBeTrue()
+        expect(appender3.called).toBeTrue()
+    })
+
+    test('returns logger with direct and inherited appenders', () => {
+        const appender1 = new FakeAppender()
+        const appender2 = new FakeAppender()
+        const appender3 = new FakeAppender()
+        loggerManager.configure({
+            appenders: { appender1, appender2, appender3 },
+            categories: {
+                'category1': { appenders: ['appender1', 'appender3'], level: Levels.INFO },
                 'category1.category1_1': { level: Levels.INFO },
                 'category1.category1_1.category1_2': { appenders: ['appender2'], level: Levels.INFO },
             }
@@ -131,6 +152,28 @@ describe('getLogger', () => {
 
         expect(appender1.called).toBeTrue()
         expect(appender2.called).toBeTrue()
+        expect(appender3.called).toBeTrue()
+    })
+
+
+    test('inherit appenders from default', () => {
+        const appender1 = new FakeAppender()
+        const appender2 = new FakeAppender()
+        const appender3 = new FakeAppender()
+        loggerManager.configure({
+            appenders: { appender1, appender2, appender3 },
+            categories: {
+                default: { appenders: ['appender1', 'appender3'], level: Levels.INFO },
+                'category1.category1_1': { level: Levels.INFO },
+                'category1.category1_1.category1_2': { level: Levels.INFO },
+            }
+        })
+        const logger = loggerManager.getLogger('category1.category1_1.category1_2')
+
+        logger.info('Some message')
+
+        expect(appender1.called).toBeTrue()
+        expect(appender2.called).toBeFalse()
         expect(appender3.called).toBeTrue()
     })
 })
