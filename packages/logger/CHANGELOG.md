@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/nbottarini/logger-js/compare/v0.5.2...v0.6.0) (2023-12-20)
+
+
+### Features
+
+* inherit from default category ([6a8ec6e](https://github.com/nbottarini/logger-js/commit/6a8ec6eb788da556a7507fe9a815795ace522e78))
+
+
+
+
+
 ## [0.5.2](https://github.com/nbottarini/logger-js/compare/v0.5.1...v0.5.2) (2023-12-19)
 
 **Note:** Version bump only for package @nbottarini/logger

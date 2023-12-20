@@ -1,6 +1,6 @@
 {
   "name": "@nbottarini/logger",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "A simple logging library for javascript with custom levels, appenders and categories. Based on Log4J",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
